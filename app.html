@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Nomor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 45%;
+            margin: auto;
+        }
+
+        .container h1 {
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        .container form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .container form .num-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        input {
+            border: none;
+            border-bottom: 3px solid #121212;
+            padding: 5px 5px 5px 5px;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .operator {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        button {
+            padding: 7px 7px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: #121212;
+            border: 2px solid #121212;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.4s;
+        }
+
+        button:hover {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .output {
+            height: 30%;
+            width: 100%;
+            background-color: #121212;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 28px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.1), 
+                0px 2px 4px rgba(0,0,0,0.1), 
+                0px 4px 8px rgba(0,0,0,0.1), 
+                0px 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .container .footer p {
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .container .footer p a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        @media (min-width: 300px) and (max-width: 576px) {
+            .container {
+                width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .container form {
+                width: 100%;
+            }
+            .container form .num-group {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Operasi Matematika</h1>
+        <form action="">
+            <label for="">Masukkan Nomor :</label>
+            <div class="num-group">
+                <input type="number" placeholder="Nomor Ke-1">
+                <input type="number" placeholder="Nomor Ke-2">
+                <input type="number" placeholder="Nomor Ke-3">
+            </div>
+            <label for="">Masukkan Operasi Aritmatika :</label>
+            <div class="operator">
+                <input type="text" placeholder="Operasi Ke-1">
+                <input type="text" placeholder="Operasi Ke-2">
+            </div>
+            <button onclick="">Hitung Nomor</button>
+        </form>
+        <div class="output">
+            <span id="nilaiTertinggi">Test</span>
+            <span id="jumlah">Test</span>
+        </div>
+        <div class="footer">
+            <p>By <a href="https://www.instagram.com/mochammadyusufpratama/">Mochammad Yusuf Pratama</a>
+            </p>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
