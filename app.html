@@ -54,15 +54,14 @@
             outline: none;
         }
 
-        .operator {
-            width: 100%;
+        form .operator {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 8px;
         }
 
         button {
-            padding: 7px 7px;
+            padding: 7px 0px;
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
@@ -106,53 +105,87 @@
             color: #333333;
         }
 
-        @media (min-width: 300px) and (max-width: 576px) {
+        @media (min-width: 1280px) and (max-width: 1800px) {
+            section {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .container {
+                width: 45%;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1279px) {
+            section {
+                margin-left: 6rem;
+                margin-right: 6rem;
+            }
             .container {
                 width: 100%;
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-            .container form {
-                width: 100%;
+                justify-content: space-evenly;
             }
             .container form .num-group {
+                font-size: 14px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 576px) {
+            section {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+            .container {
+                width: 100%;
+            }
+            .container h1 {
+                font-size: 28px;
+                font-weight: bolder;
+            }
+            .container form .num-group, .container form .operator {
+                font-size: 12px;
                 display: flex;
                 flex-direction: column;
-                width: auto;
             }
-            
+            .output {
+                height: 25%;
+                font-size: 18px;
+            }
         }
 
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Simple Operasi Matematika</h1>
-        <form action="">
-            <label for="">Masukkan Nomor :</label>
-            <div class="num-group">
-                <input type="number" placeholder="Nomor Ke-1">
-                <input type="number" placeholder="Nomor Ke-2">
-                <input type="number" placeholder="Nomor Ke-3">
+    <section>
+        <div class="container">
+            <h1>Simple Operasi Matematika</h1>
+            <form action="">
+                <label for="">Masukkan Nomor :</label>
+                <div class="num-group">
+                    <input type="number" placeholder="Nomor Ke-1">
+                    <input type="number" placeholder="Nomor Ke-2">
+                    <input type="number" placeholder="Nomor Ke-3">
+                </div>
+                <label for="">Masukkan Operasi Aritmatika :</label>
+                <div class="operator">
+                    <input type="text" placeholder="Operasi Ke-1">
+                    <input type="text" placeholder="Operasi Ke-2">
+                </div>
+                <button onclick="">Hitung Nomor</button>
+            </form>
+            <div class="output">
+                <span id="nilaiTertinggi">Test</span>
+                <span id="jumlah">Test</span>
             </div>
-            <label for="">Masukkan Operasi Aritmatika :</label>
-            <div class="operator">
-                <input type="text" placeholder="Operasi Ke-1">
-                <input type="text" placeholder="Operasi Ke-2">
+            <div class="footer">
+                <p>By <a href="https://www.instagram.com/mochammadyusufpratama/">Mochammad Yusuf Pratama</a>
+                </p>
             </div>
-            <button onclick="">Hitung Nomor</button>
-        </form>
-        <div class="output">
-            <span id="nilaiTertinggi">Test</span>
-            <span id="jumlah">Test</span>
         </div>
-        <div class="footer">
-            <p>By <a href="https://www.instagram.com/mochammadyusufpratama/">Mochammad Yusuf Pratama</a>
-            </p>
-        </div>
-    </div>
+    </section>
     <script>
-
+        
     </script>
 </body>
 </html>
